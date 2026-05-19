@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="auto">
+  <defs>
+    <!-- Dark hacker palette -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&amp;display=swap');
+      .terminal {
+        font-family: 'Fira Code', monospace;
+        font-size: 14px;
+        fill: #c9d1d9;
+      }
+      .cmd {
+        fill: #58a6ff;
+        font-weight: bold;
+      }
+      .success {
+        fill: #39d353;
+        font-weight: bold;
+      }
+      .warn {
+        fill: #daaa3f;
+      }
+      .info {
+        fill: #00F0FF;
+        filter: drop-shadow(0 0 2px rgba(0, 240, 255, 0.5));
+      }
+      .purple {
+        fill: #bc8cff;
+      }
+      .dimmed {
+        fill: #8b949e;
+      }
+      
+      /* Terminal window animation */
+      .cursor {
+        fill: #00F0FF;
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink {
+        from, to { opacity: 0 }
+        50% { opacity: 1 }
+      }
+
+      /* Line typing/scrolling timeline animation */
+      .line {
+        opacity: 0;
+        animation: reveal 22s infinite;
+      }
+
+      /* Delays for terminal logs */
+      .line-1 { animation-delay: 0s; }
+      .line-2 { animation-delay: 0.8s; }
+      .line-3 { animation-delay: 1.4s; }
+      .line-4 { animation-delay: 2.0s; }
+      .line-5 { animation-delay: 2.6s; }
+      .line-6 { animation-delay: 3.2s; }
+      .line-7 { animation-delay: 3.8s; }
+      .line-8 { animation-delay: 4.4s; }
+      .line-9 { animation-delay: 5.2s; }
+      .line-10 { animation-delay: 5.8s; }
+      .line-11 { animation-delay: 6.4s; }
+      .line-12 { animation-delay: 7.0s; }
+      .line-13 { animation-delay: 7.6s; }
+      .line-14 { animation-delay: 8.2s; }
+      .line-15 { animation-delay: 8.8s; }
+      .line-16 { animation-delay: 9.4s; }
+
+      @keyframes reveal {
+        0% { opacity: 0; transform: translateY(4px); }
+        2%, 92% { opacity: 1; transform: translateY(0); }
+        96%, 100% { opacity: 0; }
+      }
+      
+      /* Grid background styling */
+      .grid {
+        stroke: rgba(56, 139, 253, 0.04);
+        stroke-width: 1;
+      }
+    </style>
+  </defs>
+
+  <!-- Background window -->
+  <rect width="800" height="450" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  
+  <!-- Cyberpunk background grid pattern -->
+  <g class="grid">
+    <path d="M 0,50 L 800,50 M 0,100 L 800,100 M 0,150 L 800,150 M 0,200 L 800,200 M 0,250 L 800,250 M 0,300 L 800,300 M 0,350 L 800,350 M 0,400 L 800,400" />
+    <path d="M 100,0 L 100,450 M 200,0 L 200,450 M 300,0 L 300,450 M 400,0 L 400,450 M 500,0 L 500,450 M 600,0 L 600,450 M 700,0 L 700,450" />
+  </g>
+
+  <!-- Header / Window Bar -->
+  <rect width="800" height="40" rx="10" fill="#161b22" />
+  <!-- Window Controls -->
+  <circle cx="25" cy="20" r="6" fill="#ff5f56" />
+  <circle cx="45" cy="20" r="6" fill="#ffbd2e" />
+  <circle cx="65" cy="20" r="6" fill="#27c93f" />
+  
+  <!-- Terminal Title -->
+  <text x="400" y="25" font-family="'Fira Code', monospace" font-size="13" fill="#8b949e" text-anchor="middle" font-weight="bold">pedro@leanza-dev: ~/distributed-systems-vault</text>
+
+  <!-- Terminal Content -->
+  <g class="terminal" transform="translate(30, 70)">
+    
+    <!-- Command 1: RaftKV rust compilation & testing -->
+    <g class="line line-1">
+      <text x="0" y="20"><tspan class="info">pedro@leanza-dev</tspan>:<tspan class="purple">~/raftkv</tspan>$ <tspan class="cmd">cargo test --release</tspan></text>
+    </g>
+    <g class="line line-2">
+      <text x="20" y="45" class="dimmed">Compiling raftkv v0.1.0 (https://github.com/Leanza-dev/RaftKV)</text>
+    </g>
+    <g class="line line-3">
+      <text x="20" y="65" class="dimmed">Finished release [optimized] target(s) in 1.42s</text>
+    </g>
+    <g class="line line-4">
+      <text x="20" y="85" class="dimmed">Running unittests src/lib.rs</text>
+    </g>
+    <g class="line line-5">
+      <text x="40" y="105">test consensus::raft::tests::test_leader_election ... <tspan class="success">ok</tspan></text>
+    </g>
+    <g class="line line-6">
+      <text x="40" y="125">test consensus::raft::tests::test_log_replication ... <tspan class="success">ok</tspan></text>
+    </g>
+    <g class="line line-7">
+      <text x="20" y="145">test result: <tspan class="success">ok</tspan>. 2 passed; 0 failed; 0 ignored; 0 measured</text>
+    </g>
+
+    <!-- Command 2: GigaMQ Go benchmark throughput -->
+    <g class="line line-8" transform="translate(0, 150)">
+      <text x="0" y="20"><tspan class="info">pedro@leanza-dev</tspan>:<tspan class="purple">~/gigamq</tspan>$ <tspan class="cmd">go test -bench=. -benchmem ./broker/...</tspan></text>
+    </g>
+    <g class="line line-9" transform="translate(0, 150)">
+      <text x="20" y="45" class="dimmed">goos: windows, goarch: amd64, pkg: github.com/Leanza-dev/GigaMQ/broker</text>
+    </g>
+    <g class="line line-10" transform="translate(0, 150)">
+      <text x="20" y="65" class="dimmed">cpu: Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz</text>
+    </g>
+    <g class="line line-11" transform="translate(0, 150)">
+      <text x="20" y="85">BenchmarkGigaMQThroughput-12   <tspan class="success">148,510 ops/s</tspan>   <tspan class="purple">6.73 µs/op</tspan>   <tspan class="warn">0 B/op</tspan></text>
+    </g>
+    <g class="line line-12" transform="translate(0, 150)">
+      <text x="20" y="105" class="success">PASS (Zero-Allocation Memory Buffers // Active Concurrency)</text>
+    </g>
+
+    <!-- Command 3: AuraBalancer L7 C++ load balancer build -->
+    <g class="line line-13" transform="translate(0, 280)">
+      <text x="0" y="20"><tspan class="info">pedro@leanza-dev</tspan>:<tspan class="purple">~/aurabalancer</tspan>$ <tspan class="cmd">g++ -O3 -std=c++17 main.cpp -o aura_balancer -pthread</tspan></text>
+    </g>
+    <g class="line line-14" transform="translate(0, 280)">
+      <text x="20" y="45" class="success">✓ Compilation successful. Target binary: ./aura_balancer</text>
+    </g>
+    <g class="line line-15" transform="translate(0, 280)">
+      <text x="20" y="65"><tspan class="info">[INFO]</tspan> AuraBalancer bound to TCP port 8080 (Epoll L7 Forwarder)</text>
+    </g>
+    <g class="line line-16" transform="translate(0, 280)">
+      <text x="20" y="85"><tspan class="info">[INFO]</tspan> Route registered: /api/v1/orders -> SagaCommerce microservices</text>
+    </g>
+
+    <!-- Live Active Flashing Cursor -->
+    <g transform="translate(0, 385)">
+      <rect class="cursor" x="0" y="0" width="8" height="15" />
+    </g>
+  </g>
+</svg>

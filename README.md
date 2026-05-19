@@ -1,6 +1,10 @@
 # Olá! Sou o Pedro Leanza 👋
 
 <p align="center">
+  <img src="./github_profile_banner.png" alt="Pedro Leanza - Pragmatic Backend Systems Engineer" width="100%" style="border-radius: 8px;" />
+</p>
+
+<p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=24&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&width=600&lines=%3E+Computer+Science+Student;%3E+Focused+on+High-Performance+Backend;%3E+Building+Distributed+Systems;%3E+Mastering+Go%2C+Rust%2C+C%2B%2B+%26+Java;%3E+Pragmatic+AI-Augmented+Engineer" alt="Typing SVG" />
 </p>
 
@@ -69,6 +73,16 @@ flowchart TD
     style Consensus box-shadow:0 0 10px rgba(255,123,114,0.2)
     style Saga box-shadow:0 0 10px rgba(215,87,179,0.2)
 ```
+
+---
+
+### 💻 Simulador de Sistemas & Compilação
+
+Para demonstrar a corretude e a performance real do meu código de baixo nível, o terminal interativo abaixo executa testes automatizados e benchmarks de desempenho dos meus serviços de backend:
+
+<p align="center">
+  <img src="./github_profile_terminal.svg" alt="Simulação de Compilação de Sistemas Distribuídos" width="100%" />
+</p>
 
 ---
 
