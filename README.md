@@ -16,7 +16,7 @@ Minha rotina de engenharia divide-se em:
 
 ---
 
-### 🛠 Minha Arsenal Tecnológico
+### 🛠 Meu Arsenal Tecnológico
 
 <table align="center" style="border: none; background: transparent;">
   <tr>
@@ -41,6 +41,37 @@ Minha rotina de engenharia divide-se em:
 
 ---
 
+### 🗺️ Topologia de Sistemas Distribuídos
+
+Em vez de acumular projetos soltos, eu desenho as minhas aplicações para operarem como peças conectadas de uma infraestrutura robusta de alta escala. O ecossistema abaixo ilustra como meus projetos se integram no fluxo de dados de um ambiente distribuído real:
+
+```mermaid
+flowchart TD
+    classDef client fill:#0d1117,stroke:#58a6ff,stroke-width:2px,color:#fff;
+    classDef proxy fill:#0d1117,stroke:#00F0FF,stroke-width:2px,color:#fff;
+    classDef queue fill:#0d1117,stroke:#00ADD8,stroke-width:2px,color:#fff;
+    classDef db fill:#0d1117,stroke:#ff7b72,stroke-width:2px,color:#fff;
+    classDef svc fill:#0d1117,stroke:#d757b3,stroke-width:2px,color:#fff;
+
+    Client["🌐 Client Layer <br/>(SkateTech / Storefront)"]:::client
+    Client -->|HTTPS / 15k+ req/sec| Balancer["⚡ Aura Balancer <br/>(C++17 L7 Load Balancer)"]:::proxy
+    
+    Balancer -->|Zero-Copy TCP Sockets| Broker["📬 GigaMQ <br/>(Go Message Queue)"]:::queue
+    
+    Broker -->|Linearizable Log Consensus| Consensus["💾 RaftKV <br/>(Rust Key-Value Database)"]:::db
+    Broker -->|Async Event Streaming| Saga["💼 SagaCommerce <br/>(Java/Spring Boot Microservices)"]:::svc
+    
+    Saga -->|Row-Level Isolated Sync| PG["🛢 PostgreSQL Cluster"]:::db
+
+    style Client box-shadow:0 0 10px rgba(88,166,255,0.2)
+    style Balancer box-shadow:0 0 10px rgba(0,240,255,0.2)
+    style Broker box-shadow:0 0 10px rgba(0,173,216,0.2)
+    style Consensus box-shadow:0 0 10px rgba(255,123,114,0.2)
+    style Saga box-shadow:0 0 10px rgba(215,87,179,0.2)
+```
+
+---
+
 ### 🔬 Laboratórios de Backend (Fundamentos e Arquitetura)
 
 Projetos desenvolvidos para estudar como arquiteturas complexas se comportam sob estresse, priorizando eficiência de CPU/memória e corretude técnica.
@@ -54,24 +85,11 @@ Projetos desenvolvidos para estudar como arquiteturas complexas se comportam sob
 
 ### 🚀 Produtos & SaaS (Entrega de Valor e UX)
 
-Aplicações modernas focadas em resolver problemas reais de mercado, unindo engenharia escalável a uma experiência de usuário polida.
+Aplicações modernas focadas em resolver problemas reais de mercado, unindo engenharia scalável a uma experiência de usuário polida.
 
 *   **[Showroom Velocidade (Next.js)](https://github.com/Leanza-dev/ShowroomVelocidade)**: Plataforma *Website-as-a-Service* (WaaS) multi-tenant altamente otimizada para concessionárias. Foco em performance extrema (100/100 Lighthouse no mobile), SSG dinâmico e integração com funil de conversão no WhatsApp. *(Código Proprietário - Estudo de Caso Arquitetural no Repositório)*
 *   **[SkateTech (React Native)](https://github.com/Leanza-dev/SkateTech)**: Aplicativo mobile para skatistas mapearem picos e compartilharem linhas. Foco em UX nativa fluida, geolocalização e transições fluidas de interface.
 *   **[GigaCloud Infra (TypeScript)](https://github.com/Leanza-dev/GigaCloud)**: Estrutura serverless de referência com suporte a alta disponibilidade na AWS, focada em estratégias de aquecimento para prevenção de Cold Starts e observabilidade avançada.
-
----
-
-### 📊 Estatísticas do GitHub
-
-<p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Leanza-dev&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="Estatísticas do GitHub" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Leanza-dev&layout=compact&theme=tokyonight&langs_count=6" alt="Linguagens mais utilizadas" />
-</p>
-
-<p align="center">
-  <img height="120em" src="https://github-readme-streak-stats.herokuapp.com/?user=Leanza-dev&theme=tokyonight" alt="GitHub Streak" />
-</p>
 
 ---
 
