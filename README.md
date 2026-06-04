@@ -12,7 +12,7 @@
 
 ### ⚡ Sobre Mim
 
-Sou estudante de **Ciência da Computação (3º Semestre)** com foco absoluto em construir uma fundação técnica robusta. Minha abordagem de aprendizado é pragmática: recuso o superficialismo acadêmico tradicional e busco entender as engrenagens internas dos sistemas — concorrência, gerenciamento de memória, I/O e segurança de dados.
+Sou estudante de **Ciência da Computação** com foco absoluto em construir uma fundação técnica robusta. Minha abordagem de aprendizado é pragmática: complemento minha base acadêmica aprofundando-me na prática para entender as engrenagens internas dos sistemas — concorrência, gerenciamento de memória, I/O e segurança de dados.
 
 Minha rotina de engenharia divide-se em:
 *   **🔬 Laboratórios de Sistemas & Fundamentos:** Onde desço ao nível do sistema operacional para entender e projetar sistemas distribuídos tolerantes a falhas.
@@ -111,7 +111,7 @@ Aplicações modernas focadas em resolver problemas reais de mercado, unindo eng
 
 *   **LinkedIn:** [linkedin.com/in/pedro-leanza](https://www.linkedin.com/in/pedro-leanza/)
 *   **Email:** [pedro.leanza.dev@gmail.com](mailto:pedro.leanza.dev@gmail.com)
-*   **Portfólio:** [pedroleanza.dev](https://pedroleanza.dev) *(Em breve atualizado com as novas animações e i18n)*
+*   **Portfólio:** [leanza-dev-site.vercel.app](https://leanza-dev-site.vercel.app/) *(Em breve atualizado com as novas animações e i18n)*
 
 ---
 *“A complexidade é fácil. A simplicidade é que dá trabalho.”*
